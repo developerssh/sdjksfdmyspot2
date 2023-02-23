@@ -13,6 +13,7 @@ aiohttp
 aiofiles
 apscheduler
 mutagen
+python-arq
 pymongo[srv]==3.12.3
 bs4
 motor==2.5.1
