@@ -32,22 +32,22 @@ from os import execvp,sys
 async def start(client,message):
     reply_markup = [[
         InlineKeyboardButton(
-            text="Bot Channel", url="https://t.me/Spotify_downloa"),
+            text="Bot Channel", url="https://t.me/sjoapqpqpwjbebejdjwkwjbw"),
         InlineKeyboardButton(
             text="Repo",
-            url="https://github.com/Masterolic/Spotify-repo/"),
+            url="https://github.com/noo repo"),
         InlineKeyboardButton(text="Help",callback_data="helphome")
         ],
         [
             InlineKeyboardButton(text="Donate",
-            url="https://www.buymeacoffee.com/Masterolic"),
+            url="https://www.buymeacoffee.com/kshitijsharma11"),
         ]]
     if LOG_GROUP:
 
         invite_link = await client.create_chat_invite_link(chat_id=(int(LOG_GROUP) if str(LOG_GROUP).startswith("-100") else LOG_GROUP))
         reply_markup.append([InlineKeyboardButton("LOG Channel", url=invite_link.invite_link)])
     if message.chat.type != "private" and message.chat.id not in AUTH_CHATS and message.from_user.id not in SUDO_USERS:
-        return await message.reply_text("This Bot Will Not Work In Groups Unless It's Authorized.",
+        return await message.reply_text("I'm a Simple Music🎧 Downloader📥 Developer By Kshitij Sharma💻...",
                     reply_markup=InlineKeyboardMarkup(reply_markup))
     return await message.reply_text(f"Hello {message.from_user.first_name}, I'm a Simple Music Downloader Bot. I Currently Support Download from Youtube.",
                     reply_markup=InlineKeyboardMarkup(reply_markup))
@@ -99,5 +99,5 @@ async def help_home(_,query):
     button = [
         [InlineKeyboardButton(text=i, callback_data=f"help_{i}")] for i in HELP
     ]
-    await query.message.edit(f"Hello **{query.from_user.first_name}**, I'm **@NeedMusicRobot**.\nI'm Here to download your music.",
+    await query.message.edit(f"Hello **{query.from_user.first_name}**, I'm **@chochonder**.\nI'm Here to download your music.",
                         reply_markup=InlineKeyboardMarkup(button))
