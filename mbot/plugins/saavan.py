@@ -1,5 +1,3 @@
-async def song(client, message):
-    try:
        args = message.text.split(None, 1)[1]
     except:
         return await message.reply("/saavn requires an argument.")
