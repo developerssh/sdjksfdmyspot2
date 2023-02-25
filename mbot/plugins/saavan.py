@@ -1,4 +1,4 @@
-@Client.on_message(filters.command('saavn') & filters.text)
+@sdjklfjsdbot.on_message(filters.command('saavn') & filters.text)
 async def song(client, message):
     try:
        args = message.text.split(None, 1)[1]
